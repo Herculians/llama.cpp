@@ -1642,6 +1642,10 @@ class TextModel(ModelBase):
 
         res = None
 
+        if chkhsh == "5c01b97b9959d897bb3670b43dd3cfe4ab93cef6280acd4d55a15e66d68213c9":
+            # ref: ai-sage/Giga-Embeddings-instruct-480M-0826 — GPT-4o-style pre-tokenizer (camelCase + \p{N}{1,3} + [\r\n/]*)
+            res = "gpt-4o"
+
         # NOTE: if you get an error here, you need to update the convert_hf_to_gguf_update.py script
         #       or pull the latest version of the model from Huggingface
         #       don't edit the hashes manually!
